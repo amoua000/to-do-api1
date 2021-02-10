@@ -2,12 +2,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 
+//connection goes here for mysql
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'root',
   database: 'todo'
 });
+
+
+// checks if connecton works
 
 try {
   connection.connect();
